@@ -1,0 +1,48 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<img src="/LogoHorizontal.png" class="ImgHeader"/>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/Rompecabezas">Rompecabezas</HeaderLink>
+		<HeaderLink href="/Nosotros">Contactanos</HeaderLink>
+		<object data="/Carrito.svg" type="image/svg+xml" id="alphasvg" class="Carrito" width="20%" height="20%"/>
+	</nav>
+</header>
+
+<style>
+	a{
+		text-emphasis: none;
+		color: inherit;
+	}
+	.ImgHeader{
+		height: 35px;
+	}
+	header{
+		display:flex;
+		align-items: center;
+		background-color: #00010D;
+		min-height: 3em;
+	}
+	nav {
+		width: 25em;
+		display: flex;
+		margin-left: auto;
+		margin-right: 2vw;
+		align-items: center;
+		justify-content:space-between;
+	}
+	.Carrito{
+		height: 25px;
+	}
+
+	@media(max-width: 768px){
+		nav{
+			display: none;
+			background-color: red;
+			
+		}
+	}
+</style>
