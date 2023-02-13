@@ -3,12 +3,66 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE } from "../consts";
 import DefaultLayout from "../layouts/defaultLayout.astro";
+import CorteLaser from '../assets/CorteLaser.png';
 ---
 
 <DefaultLayout>
 	<Header title={SITE_TITLE} />
 	<main>
-		Home
+		<section>
+				<div class="Img">
+					<img src="/CorteLaser.png"/>
+				</div>
+				<div class="Content">
+					<article>
+						<h2>¿Quienes Somos?</h2>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Consectetur, ratione rerum, eaque voluptates aliquam
+							repellendus, dolorem harum praesentium itaque necessitatibus
+							tempora exercitationem id eos eligendi esse animi ut hic?
+							Cupiditate.
+						</p>
+					</article>
+				</div>
+		</section>
+		<div class="Banner">
+
+		</div>
 	</main>
 	<Footer />
 </DefaultLayout>
+
+<style>
+	section{
+		display: flex;
+		height: 30em;
+	}
+	article{
+		width: 70%;
+	}
+	.Img {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50%;
+		height: 100%;
+	}
+
+	.Img img{
+		width: 100%;
+		height: 100%;
+	}
+	.Content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 50%;
+		height: 100%;
+	}
+	.Banner{
+		background-color: #5A451C;
+		height: 20vh;
+	}
+</style>
