@@ -4,6 +4,8 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE } from "../consts";
 import DefaultLayout from "../layouts/defaultLayout.astro";
 import CorteLaser from '../assets/CorteLaser.png';
+import ItemNovedades from "../components/ItemNovedades/ItemNovedades";
+import { Icon } from 'astro-icon';
 ---
 
 <DefaultLayout>
@@ -26,9 +28,21 @@ import CorteLaser from '../assets/CorteLaser.png';
 					</article>
 				</div>
 		</section>
-		<div class="Banner">
-
-		</div>
+		<section class="Banner">
+			<div>
+				<ItemNovedades client:visible />
+				<p>Empresa 100% Mexicana</p>
+				
+			</div>
+			<div>
+				<ItemNovedades client:visible />
+				<p>+ 1,000 clientes satisfechos</p>
+			</div>
+			<div>
+				<ItemNovedades client:visible />
+				<p>Satisfacción del cliente</p>
+			</div>
+		</section>
 	</main>
 	<Footer />
 </DefaultLayout>
@@ -63,6 +77,24 @@ import CorteLaser from '../assets/CorteLaser.png';
 	}
 	.Banner{
 		background-color: #5A451C;
-		height: 20vh;
+		width: 100%;
+		height: 300px;
+		display: flex;
+		align-items: center;
+		justify-content: :space-between;
+	}
+	.Banner div{
+		width: 33%;
+		height: 250px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.Banner p{
+		color: white;
+		font-size: 12px;
+		margin-top: 50px;
 	}
 </style>
+
